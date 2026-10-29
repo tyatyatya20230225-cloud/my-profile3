@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MY PROFILE</title>
+
+    <link rel="stylesheet" href="script.css" />
+    <script src="style.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#home" class="logo">MY PROFILE<span>.</span></a>
+
+      <nav>
+        <a href="#about">ABOUT</a>
+        <a href="#favorites">FAVORITES</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- TOP -->
+      <section class="hero" id="home">
+        <div class="hero-text">
+          <p class="eyebrow">WELCOME TO MY WORLD</p>
+          <h1>MY<br /><span>PROFILE.</span></h1>
+          <p class="hero-description">Welcome to my personal website.</p>
+          <a href="#about" class="button">DISCOVER MORE ↘</a>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="profile.jpg"
+            alt="プロフィール写真"
+            onerror="
+              this.style.display = 'none';
+              this.nextElementSibling.style.display = 'flex';
+            "
+          />
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section about reveal" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">01 — ABOUT ME</p>
+          <h2>WHO <span>AM I?</span></h2>
+        </div>
+
+        <div class="about-content">
+          <div class="about-label">INTRODUCTION</div>
+
+          <div class="about-text">
+            <h3>はじめまして。</h3>
+            <p>黒木 泰翔</p>
+            <p>2007年11月6日生まれ。宮崎県出身。</p>
+
+            <div class="profile-details">
+              <div>
+                <span>NAME</span>
+                <p>黒木 泰翔（クロギ タイト）</p>
+              </div>
+
+              <div>
+                <span>HOBBY</span>
+                <p>運動・ゲーム</p>
+              </div>
+
+              <div>
+                <span>PERSONALITY</span>
+                <p>すんごく優しい</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAVORITES -->
+      <section class="section favorites reveal" id="favorites">
+        <div class="section-heading">
+          <p class="eyebrow">02 — MY FAVORITES</p>
+          <h2>THINGS <span>I LOVE.</span></h2>
+          <p class="section-description">
+            My favorite things, all in one place.
+          </p>
+        </div>
+
+        <div class="favorite-grid">
+          <!-- HOBBY -->
+          <article class="favorite-card hobby-card">
+            <span class="card-number">01</span>
+            <p class="card-category">HOBBY</p>
+            <h3>HOBBIES</h3>
+
+            <div class="hobby-illustrations">
+              <div class="hobby-item">
+                <img src="basketball.png" alt="バスケットボール" />
+                <span>BASKETBALL</span>
+              </div>
+
+              <div class="hobby-item">
+                <img src="game.png" alt="ゲーム" />
+                <span>GAME</span>
+              </div>
+
+              <div class="hobby-item">
+                <img src="gym.png" alt="筋トレ" />
+                <kawspan>GYM</span>
+              </div>
+
+              <div class="hobby-item">
+                <img src="karaoke.png" alt="カラオケ" />
+                <span>KARAOKE</span>
+              </div>
+            </div>
+
+            <span class="card-symbol">↗</span>
+          </article>
+
+          <!-- MUSIC -->
+          <article class="favorite-card">
+            <span class="card-number">02</span>
+            <p class="card-category">MUSIC</p>
+            <h3>Favorite Music</h3>
+            <p>エンドロール / 川崎鷹也</p>
+
+            <iframe
+              title="エンドロール / 川崎鷹也 - Spotify"
+              style="border-radius: 12px; margin-top: 15px"
+              src="https://open.spotify.com/embed/track/5KaXhQSKIS0fQFBKYqNTGG"
+              width="100%"
+              height="152"
+              frameborder="0"
+              allow="
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                fullscreen;
+                picture-in-picture;
+              "
+              loading="lazy"
+            ></iframe>
+
+            <a
+              href="https://open.spotify.com/track/5KaXhQSKIS0fQFBKYqNTGG"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="spotify-link"
+            >
+              ▶ LISTEN ON SPOTIFY
+            </a>
+
+            <span class="card-symbol">♫</span>
+          </article>
+
+          <!-- ANIME -->
+          <article class="favorite-card anime-card">
+            <span class="card-number">03</span>
+            <p class="card-category">ANIME</p>
+            <h3>MY FAVORITE ANIME</h3>
+            <p class="anime-intro">STORIES THAT CAPTIVATE ME.</p>
+
+            <div class="anime-grid">
+              <div class="anime-box">
+                <div class="anime-image-wrap">
+                  <img
+                    src="attack-on-titan.jpg"
+                    alt="進撃の巨人"
+                    loading="lazy"
+                  />
+                  <span class="anime-tag">ACTION</span>
+                </div>
+
+                <div class="anime-caption">
+                  <span>01</span>
+                  <h4>ATTACK ON TITAN</h4>
+                  <p>進撃の巨人</p>
+                </div>
+              </div>
+
+              <div class="anime-box">
+                <div class="anime-image-wrap">
+                  <img
+                    src="tensura.jpg"
+                    alt="転生したらスライムだった件"
+                    loading="lazy"
+                  />
+                  <span class="anime-tag">FANTASY</span>
+                </div>
+
+                <div class="anime-caption">
+                  <span>02</span>
+                  <h4>THAT TIME I GOT REINCARNATED AS A SLIME</h4>
+                  <p>転生したらスライムだった件</p>
+                </div>
+              </div>
+
+              <div class="anime-box">
+                <div class="anime-image-wrap">
+                  <img
+                    src="yomi-no-tsugai.jpg"
+                    alt="黄泉のツガイ"
+                    loading="lazy"
+                  />
+                  <span class="anime-tag">FANTASY</span>
+                </div>
+
+                <div class="anime-caption">
+                  <span>03</span>
+                  <h4>YOMI NO TSUGAI</h4>
+                  <p>黄泉のツガイ</p>
+                </div>
+              </div>
+            </div>
+
+            <span class="card-symbol">✳</span>
+          </article>
+
+          <!-- GAMES -->
+          <article class="favorite-card game-card">
+            <span class="card-number">04</span>
+            <p class="card-category">GAMES</p>
+            <h3>MY FAVORITE GAMES</h3>
+            <p class="game-intro">気分に合わせて楽しむ、お気に入りのゲーム。</p>
+
+            <div class="game-grid">
+              <div class="game-box">
+                <div class="game-image-wrap">
+                  <img
+                    src="brawlstars.jpg"
+                    alt="ブロスタ"
+                    loading="lazy"
+                  />
+                  <span class="game-tag">ACTION</span>
+                </div>
+
+                <div class="game-caption">
+                  <span>01</span>
+                  <h4>BRAWL STARS</h4>
+                  <p>ブロスタ</p>
+                </div>
+              </div>
+
+              <div class="game-box">
+                <div class="game-image-wrap">
+                  <img
+                    src="pokemongo.jpg"
+                    alt="ポケモンGO"
+                    loading="lazy"
+                  />
+                  <span class="game-tag">ADVENTURE</span>
+                </div>
+
+                <div class="game-caption">
+                  <span>02</span>
+                  <h4>POKÉMON GO</h4>
+                  <p>ポケモンGO</p>
+                </div>
+              </div>
+
+              <div class="game-box">
+                <div class="game-image-wrap">
+                  <img
+                    src="pokemon.jpg"
+                    alt="ポケモンシリーズ"
+                    loading="lazy"
+                  />
+                  <span class="game-tag">RPG</span>
+                </div>
+
+                <div class="game-caption">
+                  <span>03</span>
+                  <h4>POKÉMON</h4>
+                  <p>ポケモンシリーズ</p>
+                </div>
+              </div>
+
+              <div class="game-box">
+                <div class="game-image-wrap">
+                  <img
+                    src="splatoon.jpg"
+                    alt="スプラトゥーン"
+                    loading="lazy"
+                  />
+                  <span class="game-tag">SHOOTING</span>
+                </div>
+
+                <div class="game-caption">
+                  <span>04</span>
+                  <h4>SPLATOON</h4>
+                  <p>スプラトゥーン</p>
+                </div>
+              </div>
+            </div>
+
+            <span class="card-symbol">🎮</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- THANK YOU -->
+      <section class="section contact reveal" id="contact">
+        <p class="eyebrow">03 — THANK YOU</p>
+        <h2>THANK <span>YOU.</span></h2>
+        <p>最後まで見てくれてありがとう！</p>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <a href="#home" class="logo">MY PROFILE<span>.</span></a>
+      <p>© 2026 MY PROFILE</p>
+      <a href="#home">BACK TO TOP ↑</a>
+    </footer>
+  </body>
+</html>

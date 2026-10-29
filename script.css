@@ -1,0 +1,1106 @@
+/* =========================
+   基本設定
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #090909;
+  --surface: #111111;
+  --white: #ffffff;
+  --gray: #b3b3b3;
+  --line: #333333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--white);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+section {
+  padding: 120px 8%;
+}
+
+/* =========================
+   ヘッダー
+========================= */
+
+.header {
+  width: 100%;
+  padding: 25px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #090909;
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+}
+
+.header nav {
+  display: flex;
+  gap: 30px;
+}
+
+.header nav a {
+  color: #cccccc;
+  font-size: 12px;
+  transition: color 0.3s;
+}
+
+.header nav a:hover {
+  color: #ffffff;
+}
+
+/* =========================
+   トップページ
+========================= */
+
+#home {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background-color: #090909;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  color: #ffffff;
+  font-size: clamp(40px, 7vw, 90px);
+  line-height: 1.2;
+  margin: 20px 0;
+  letter-spacing: 0.08em;
+}
+
+.hero-text p {
+  color: #c4c4c4;
+  font-size: 14px;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 400px;
+}
+
+.hero-image img {
+  width: 100%;
+  border: 1px solid #333333;
+  object-fit: cover;
+}
+
+.eyebrow {
+  color: #bdbdbd;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+/* =========================
+   セクション共通
+========================= */
+
+.section-heading {
+  margin-bottom: 50px;
+}
+
+.section-heading h2 {
+  color: #ffffff;
+  font-size: clamp(32px, 5vw, 55px);
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+}
+
+.section-heading h2 span {
+  color: #bdbdbd;
+}
+
+.section-description {
+  margin-top: 20px;
+  color: #c4c4c4;
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  background-color: #111111;
+}
+
+#about {
+  color: #ffffff;
+}
+
+.about h2,
+.about h3 {
+  color: #ffffff;
+}
+
+.about p {
+  color: #d0d0d0;
+  line-height: 2.2;
+}
+
+.about-content {
+  max-width: 800px;
+}
+
+/* =========================
+   THINGS I LOVE
+========================= */
+
+/* セクション全体の背景と文字色 */
+.favorites,
+#favorites {
+  background-color: #0d0d0d;
+  color: #ffffff;
+}
+
+/* 見出しをはっきり表示 */
+#favorites .section-heading h2,
+.favorites .section-heading h2 {
+  color: #ffffff;
+}
+
+#favorites .section-heading h2 span,
+.favorites .section-heading h2 span {
+  color: #d0d0d0;
+}
+
+/* 説明文 */
+#favorites .section-description,
+.favorites .section-description {
+  color: #d0d0d0;
+}
+
+/* カードを並べる */
+.favorite-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+/* カードの背景 */
+.favorite-card {
+  background-color: #171717;
+  color: #ffffff;
+  padding: 35px;
+  border: 1px solid #383838;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* カードにマウスを乗せたとき */
+.favorite-card:hover {
+  transform: translateY(-5px);
+  background-color: #1d1d1d;
+  border-color: #777777;
+}
+
+/* カード番号 */
+.card-number {
+  color: #a0a0a0;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  margin-bottom: 20px;
+}
+
+/* カテゴリー名 */
+.card-category {
+  color: #c4c4c4;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  margin-bottom: 10px;
+}
+
+/* カードのタイトル */
+.favorite-card h3 {
+  color: #ffffff;
+  font-size: 25px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* カードの説明文 */
+.favorite-card p {
+  color: #d0d0d0;
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* カード内のアイコン */
+.card-symbol {
+  color: #ffffff;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+/* カード内の最後の説明文も明るくする */
+.favorite-card > p:last-of-type {
+  color: #d0d0d0;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+#contact {
+  color: #ffffff;
+}
+
+.contact h2,
+.contact h3 {
+  color: #ffffff;
+}
+
+.contact p {
+  color: #d0d0d0;
+}
+
+.contact a {
+  color: #ffffff;
+  border-bottom: 1px solid #777777;
+  transition: color 0.3s;
+}
+
+.contact a:hover {
+  color: #bdbdbd;
+}
+
+/* =========================
+   フッター
+========================= */
+
+.footer {
+  padding: 30px 8%;
+  text-align: center;
+  background-color: #080808;
+  border-top: 1px solid #292929;
+}
+
+.footer p {
+  color: #a0a0a0;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+/* =========================
+   スクロールアニメーション
+========================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   スマートフォン対応
+========================= */
+
+@media (max-width: 768px) {
+  section {
+    padding: 80px 6%;
+  }
+
+  .header {
+    padding: 20px 6%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .header nav {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header nav a {
+    font-size: 11px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  #home {
+    min-height: auto;
+  }
+
+  .hero-text h1 {
+    font-size: 45px;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .section-heading h2 {
+    font-size: 35px;
+  }
+
+  .favorite-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .favorite-card {
+    padding: 25px;
+  }
+
+  .favorite-card h3 {
+    font-size: 22px;
+  }
+}
+
+/* =========================
+   アニメーションを控えたい場合
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* ========================================
+PREMIUM ANIMATIONS
+黒×白の高級感を演出
+======================================== */
+
+/* ① ページ全体のオープニング */
+body {
+  animation: pageReveal 1.2s ease both;
+}
+
+@keyframes pageReveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ② メインタイトルが浮かび上がる */
+.hero-text h1 {
+  animation: titleReveal 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: 0.2s;
+}
+
+.hero-text .eyebrow {
+  animation: titleReveal 1s ease both;
+  animation-delay: 0.1s;
+}
+
+.hero-text p {
+  animation: titleReveal 1.2s ease both;
+  animation-delay: 0.4s;
+}
+
+@keyframes titleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* ③ 写真がゆっくり現れる */
+.hero-image {
+  overflow: hidden;
+  animation: imageReveal 1.5s ease both;
+  animation-delay: 0.3s;
+}
+
+.hero-image img {
+  transition:
+    transform 1s ease,
+    filter 1s ease;
+}
+
+.hero-image:hover img {
+  transform: scale(1.04);
+  filter: brightness(1.08);
+}
+
+@keyframes imageReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* ④ ナビゲーションの下線アニメーション */
+.header nav a {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.header nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s ease;
+}
+
+.header nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ⑤ セクション見出しの動き */
+.section-heading {
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+/* ⑥ カードの立体感 */
+.favorite-card {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+    background-color 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.favorite-card:hover {
+  transform: translateY(-8px);
+  background-color: #1b1b1b;
+  border-color: #888888;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* カードに光が走る */
+.favorite-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(
+    110deg,
+    transparent,
+    rgba(255, 255, 255, 0.06),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left 0.7s ease;
+  pointer-events: none;
+}
+
+.favorite-card:hover::before {
+  left: 150%;
+}
+
+/* ⑦ カード内のタイトル */
+.favorite-card h3 {
+  transition:
+    letter-spacing 0.35s ease,
+    color 0.35s ease;
+}
+
+.favorite-card:hover h3 {
+  letter-spacing: 0.1em;
+  color: #f0f0f0;
+}
+
+/* ⑧ カードの番号 */
+.card-number {
+  transition:
+    color 0.3s ease,
+    letter-spacing 0.3s ease;
+}
+
+.favorite-card:hover .card-number {
+  color: #ffffff;
+  letter-spacing: 0.35em;
+}
+
+/* ⑨ ボタン・リンクのクリック反応 */
+button,
+.button,
+.btn {
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    background-color 0.3s ease;
+}
+
+button:hover,
+.button:hover,
+.btn:hover {
+  opacity: 0.8;
+}
+
+button:active,
+.button:active,
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* ⑩ セクションの区切り線 */
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 1px;
+  margin-top: 25px;
+  background-color: #777777;
+  transition: width 0.5s ease;
+}
+
+.section-heading:hover::after {
+  width: 100px;
+}
+
+/* ⑪ 背景にさりげない光を追加 */
+#home {
+  position: relative;
+  isolation: isolate;
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.045),
+    transparent 70%
+  );
+  filter: blur(20px);
+  animation: ambientLight 8s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes ambientLight {
+  from {
+    transform: translate(0, 0);
+    opacity: 0.4;
+  }
+  to {
+    transform: translate(-40px, 30px);
+    opacity: 1;
+  }
+}
+
+/* ⑫ 既存のスクロールアニメーションを少し強調 */
+.reveal {
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ⑬ スマートフォンでは動きを控えめにする */
+@media (max-width: 768px) {
+  #home::before {
+    width: 180px;
+    height: 180px;
+  }
+
+  .favorite-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .hero-image:hover img {
+    transform: none;
+  }
+}
+
+/* ⑭ 動きを減らす設定がある端末への配慮 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Spotifyリンク */
+.spotify-link {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 20px;
+
+  color: #ffffff;
+  background-color: #111111;
+  border: 1px solid #777777;
+
+  font-size: 11px;
+  letter-spacing: 0.15em;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.spotify-link:hover {
+  background-color: #ffffff;
+  color: #090909;
+  border-color: #ffffff;
+  transform: translateY(-3px);
+}
+/* ゲーム紹介 */
+.game-card {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.08);
+}
+
+.game-intro {
+  margin-bottom: 24px;
+  line-height: 1.8;
+  color: #bdbdbd;
+}
+
+.game-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 20px;
+}
+
+.game-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  transition:
+    background 0.3s ease,
+    padding 0.3s ease;
+}
+
+.game-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  padding-left: 18px;
+}
+
+.game-number {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #777;
+}
+
+.game-item h4 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.game-item p {
+  margin: 0;
+  font-size: 13px;
+  color: #aaa;
+}
+/* ゲーム画像 */
+.game-image {
+  width: 110px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 6px;
+  filter: grayscale(40%);
+  transition:
+    filter 0.4s ease,
+    transform 0.4s ease;
+}
+
+/* マウスを乗せるとカラーが鮮やかになる */
+.game-item:hover .game-image {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* 画像と文字の配置 */
+.game-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ゲーム名の部分 */
+.game-text {
+  flex: 1;
+}
+
+.game-text h4 {
+  margin: 6px 0;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.game-text p {
+  margin: 0;
+  color: #aaa;
+  font-size: 13px;
+}
+
+/* スマホで見たとき */
+@media (max-width: 480px) {
+  .game-image {
+    width: 85px;
+    height: 75px;
+  }
+
+  .game-item {
+    gap: 14px;
+  }
+}
+/* ゲームカード一覧 */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 28px;
+}
+
+/* カード本体 */
+.game-box {
+  min-width: 0;
+  overflow: hidden;
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 12px;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.game-box:hover {
+  transform: translateY(-8px);
+  border-color: #888;
+}
+
+/* 画像 */
+.game-image-wrap {
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+  background: #222;
+}
+
+.game-image-wrap img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.game-box:hover .game-image-wrap img {
+  transform: scale(1.12);
+}
+
+/* ジャンルタグ */
+.game-tag {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 10px;
+  letter-spacing: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* カード内の文字 */
+.game-caption {
+  padding: 16px;
+}
+
+.game-caption > span {
+  color: #777;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.game-caption h4 {
+  margin: 8px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  overflow-wrap: anywhere;
+}
+
+.game-caption p {
+  margin: 0;
+  color: #aaa;
+  font-size: 13px;
+}
+
+/* スマホ対応 */
+@media (max-width: 480px) {
+  .game-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .game-image-wrap {
+    height: 210px;
+  }
+}
+/* アニメ紹介カード */
+.anime-intro {
+  margin-bottom: 24px;
+  color: #aaa;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.anime-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 28px;
+}
+
+.anime-box {
+  min-width: 0;
+  overflow: hidden;
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 12px;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.anime-box:hover {
+  transform: translateY(-8px);
+  border-color: #888;
+}
+
+.anime-image-wrap {
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+  background: #222;
+}
+
+.anime-image-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.anime-box:hover .anime-image-wrap img {
+  transform: scale(1.1);
+}
+
+.anime-tag {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.anime-caption {
+  padding: 16px;
+}
+
+.anime-caption > span {
+  color: #777;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.anime-caption h4 {
+  margin: 8px 0;
+  font-size: 13px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  overflow-wrap: anywhere;
+}
+
+.anime-caption p {
+  margin: 0;
+  color: #aaa;
+  font-size: 13px;
+}
+
+/* スマホ対応 */
+@media (max-width: 480px) {
+  .anime-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .anime-image-wrap {
+    height: 230px;
+  }
+}
+
+/* 趣味のイラスト */
+.hobby-illustrations {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.hobby-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 12px 6px;
+  border: 1px solid #292929;
+  border-radius: 8px;
+  background: #111;
+  transition: border-color 0.3s ease;
+}
+
+.hobby-item:hover {
+  border-color: #888;
+}
+
+.hobby-item img {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.hobby-item:hover img {
+  transform: scale(1.1);
+}
+
+.hobby-item span {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+  .hobby-illustrations {
+    gap: 8px;
+  }
+
+  .hobby-item {
+    padding: 8px 4px;
+  }
+
+  .hobby-item img {
+    width: 48px;
+    height: 48px;
+  }
+}
